@@ -10,6 +10,12 @@ public class Car {
     this.color = color;
   }
 
+  // We can overload the constructor, just like any other method.
+  // Here's a version of the constructor that just sets the color.
+  public Car (String color) {
+    this.color = color;
+  }
+
   // Instance methods
   // getters: use these to get the values of the instance variables directly
   double getMph() {
