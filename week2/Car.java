@@ -35,9 +35,17 @@ public class Car {
     this.color = color;
   }
 
-  // one last instance method: requires an instance of the class
+  // instance menthod: how long does it take a particular car to stop
+  // in icy conditions?
   double icyConditionBehavior() {
     return this.mph * 5;
+  }
+
+  // overwriting the toString() method that comes "for free"
+  // with every class in Java
+  public String toString() {
+    String s = this.color + ", " + this.mph;
+    return s;
   }
 
   // static methods
@@ -46,6 +54,7 @@ public class Car {
   static double getFeet(double miles) {
     return miles * 5280;
   }
+
 
   // main method
   public static void main (String[] args) {
@@ -70,6 +79,13 @@ public class Car {
     // calling the setter to change the color of the car
     c1.setColor("red");
     System.out.format("I have painted this car %s.%n", c1.getColor());
+
+    // calling the toString() method
+    // you can call it explicitly, but it is what gets called
+    // automaticlaly when you pass it to System.out.println
+    System.out.println(c1.toString());
+    System.out.println(c1);
+
   }
 
 }
