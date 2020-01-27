@@ -41,7 +41,7 @@ public class Car {
     return this.mph * 5;
   }
 
-  // overwriting the toString() method that comes "for free"
+  // overriding the toString() method that comes "for free"
   // with every class in Java
   public String toString() {
     String s = this.color + ", " + this.mph;
